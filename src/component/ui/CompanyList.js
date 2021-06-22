@@ -18,13 +18,13 @@ export default function CompanyList(props) {
 
     return (
         <div>
-            {props.companyName && props.companyName.forEach(element => {
+            {props.companyName && props.companyName.map((element, i) => (
                 <div>
-                    <div>{element.name}</div>
+                    <div key = {i}>{element.name}</div>
            {console.log(element.name)}
 
                 </div>
-            })}
+            ))}
         </div>
     )
 }
